@@ -1,0 +1,65 @@
+.container{
+    border: 2px solid gray;
+    border-radius: 5px;
+    height: 10vh;
+    min-height: 60px;
+
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+
+.panel_main {
+    display:flex;
+    align-items: center;
+    width:100%;
+}
+
+.ids {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Rating Style */
+.rating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: Arial, sans-serif;
+}
+
+.rating, h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 2px 0;
+  @media (max-width: 1024px) {
+    font-size: 40px;
+    margin: 2px 0;
+  }
+}
+
+.rating-number {
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1;
+  color: #f5f5f7;
+}
+
+.rating-type {
+  margin-top: 8px;
+  font-size: 17px;
+  color: #c8c8cf;
+}
+
+.rating-icon {
+  margin-right: 6px;
+  font-size: 14px;
+}
+
+.rating-peak {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #777984;
+}

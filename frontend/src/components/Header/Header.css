@@ -1,0 +1,29 @@
+.header {
+    /* border: 2px solid gray; */
+    border-radius: 5px;
+    height: 10px;
+    min-height: 5px;
+
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+
+.header>button {
+    margin-left: auto;
+    height: 50px;
+    width: 50px;
+
+    background-color: transparent;
+    
+    border-style: none;
+    font-size: 30px;
+
+    /* border-radius: 50%;
+    border-style: solid; */
+}
+
+/* .header>button>span {
+    border: 2px solid gray;
+    margin: 3px;
+} */
