@@ -3,6 +3,7 @@ export default function panel_main({username}) {
         <div className="panel_main">
             <div className="ids">
                 <h1>{username}</h1>
+                <p>original name</p>
             </div>
         </div>
     )

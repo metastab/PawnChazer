@@ -6,7 +6,7 @@ export default function GamesPanel(){
 
             <div className="bar-section">
                 <div className="win-rate" style={{ whiteSpace: 'nowrap' }}> 55% Win</div>
-                <WinBar winrate={58} />
+                <WinBar winrate={55} loserate={40}/>
                 <div className="total-games" style={{ whiteSpace: 'nowrap' }}>123 Games</div>
             </div>
 

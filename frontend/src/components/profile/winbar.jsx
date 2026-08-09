@@ -1,7 +1,8 @@
 import './WinBar.css'
 
-function WinBar({ winrate = 0 }) {
-    const percentage = winrate
+export default function WinBar({ winrate = 0, loserate = 0}) {
+    const percentage = winrate;
+    const lose = loserate;
 
     // unnecessary cases
     if (winrate > 100) winrate = 100;
@@ -10,11 +11,13 @@ function WinBar({ winrate = 0 }) {
     return (
         <div className="win-bar">
             <div
-                className="progress-fill"
+                className="green-fill"
                 style={{ width: `${percentage}%` }}
+            />
+            <div
+                className="red-fill"
+                style={{ width: `${loserate}%` }}
             />
         </div>
     )
 }
-
-export default WinBar

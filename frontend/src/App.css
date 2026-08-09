@@ -11,15 +11,17 @@
 
 .panel_main {
     display:flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     width:100%;
 }
 
 .ids {
     display:flex;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 1rem;
+    gap: 15px;
 }
 
 /* Rating Style */
