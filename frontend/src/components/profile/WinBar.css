@@ -7,21 +7,23 @@
   display: flex;
   gap: -5px;
 
-  background: #29292d;
+  background: #7c8a9c;
   border-radius: 999px;
   overflow: hidden;
 }
 .red-fill {
   height: 100%;
-  background: #c41616;
-  border-radius: 0px 999px 999px 0px ;
+  background: #ef4343;
+  /* border-radius: 0px 999px 999px 0px ; */
+
+  margin-left: auto;
 
   transition: width 0.3s ease;
 }
 
 .green-fill {
   height: 100%;
-  background: #16c45b;
+  background: #21c45d;
   /* border-radius: 999px; */
 
   transition: width 0.3s ease;

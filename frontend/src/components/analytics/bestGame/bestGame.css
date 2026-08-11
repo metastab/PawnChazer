@@ -1,0 +1,77 @@
+.bestgame-container{
+    border: 2px solid gray;
+    border-radius: 5px;
+    min-height: 10.5vh;
+
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 0rem 0.5rem 0rem;
+
+    width: 60%;
+}
+
+.result-container {
+    box-sizing: border-box;
+
+    /* background-color: pink; */
+
+    /* border: 2px solid gray; */
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* padding: 0.5rem 0rem 1rem 0rem; */
+
+    gap: 5rem;
+
+
+}
+
+.bestgame-title{
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    
+}
+
+.player-1 h5,
+.player-2 h5,
+.result h5 {
+    margin: 0;
+    padding: 0;
+}
+
+.player-1,
+.player-2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5rem;
+
+}
+
+.piece-color{
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    border: 2px solid grey;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.25rem;
+}
+
+@media (max-width: 1024px) {
+    .bestgame-container {
+        width: 100%;
+        padding: 0.75rem 0rem;
+    }
+    .result-container {
+        gap: 2rem;
+    }
+}

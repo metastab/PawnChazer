@@ -3,9 +3,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    margin: 10px;
+    margin-bottom: 0px;
     
     /* padding: 0.3rem; */
-    /* gap: 5px; */
+    gap: 10px;
 }
 
 @media (max-width: 1024px) {
@@ -15,7 +18,7 @@
         justify-content: center;
         padding: 0rem;
     }
-    .others-container{
+    .quick-actions-container{
         width:100%;
         min-width: 90%;
     }
@@ -30,7 +33,7 @@
     }
 }
 
-.others-container{
+.quick-actions-container{
     border: 2px solid gray;
     border-radius: 5px;
     height: 40vh;
@@ -42,7 +45,7 @@
     padding: 1rem 0.5rem;
     gap: 5px;
 
-    width: 40%;
+    width: 30%;
 }
 
 .challange-button{

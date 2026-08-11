@@ -11,9 +11,9 @@ export default function GamesPanel(){
             </div>
 
             <div className="stats-section">
-                <h7 style={{ color: '#6ade7aff' }}>62 W</h7>
-                <h7 style={{ color: '#f14747ff' }}>58 L</h7>
-                <h7 style={{ color: '#f1ffeeb6' }}>13 D</h7>
+                <h7 style={{ color: '#21c45d' }}>62 W</h7>
+                <h7 style={{ color: '#7c8a9c' }}>13 D</h7>
+                <h7 style={{ color: '#ef4343' }}>58 L</h7>
             </div>
         </div>
     )

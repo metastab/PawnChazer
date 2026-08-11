@@ -1,6 +1,6 @@
-export default function Others() {
+export default function QuickActions() {
     return (
-        <div className="others-container">
+        <div className="quick-actions-container">
 
             <h3>Quick Actions</h3>
             <button className="challange-button">Challange</button>
