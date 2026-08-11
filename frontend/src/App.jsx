@@ -8,11 +8,14 @@ import Rating from './components/profile/rating'
 import GamesPanel from './components/profile/games'
 import Mainbody from './components/profile/body-section/Mainbody'
 import Footer from './components/footer/Footer'
+import DailyPuzzle from './components/chessboard/DailyPuzzle'
+import Streak from './components/streak/Streak'
 
 import './components/Header/Header.css'
 import './App.css'
 import './components/profile/games.css'
 import './components/footer/footer.css'
+import './components/streak/Streak.css'
 
 function App() {
 
@@ -28,9 +31,10 @@ function App() {
 
       <GamesPanel/>
       <Mainbody/>
+      <DailyPuzzle/>
+      <Streak/>
       <Footer/>
     </>
-
   )
 }
 

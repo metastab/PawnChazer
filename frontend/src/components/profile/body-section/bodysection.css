@@ -1,6 +1,7 @@
 .body-section{
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     
     /* padding: 0.3rem; */
@@ -32,7 +33,8 @@
 .others-container{
     border: 2px solid gray;
     border-radius: 5px;
-    min-height: 50vh;
+    height: 40vh;
+    min-height: 40vh;
 
     display: flex;
     flex-direction: column;
@@ -48,7 +50,7 @@
     border-radius: 5px;
     padding: 0.5rem;
     font-size: 1.2rem;
-    width: 100%;
+    width: 75%;
     height: 4rem;
     margin: 0.5rem;
 }
@@ -56,6 +58,7 @@
 .gamehistory-container{
     border: 2px solid gray;
     border-radius: 5px;
+    height:60px;
     min-height: 50vh;
 
     display: flex;

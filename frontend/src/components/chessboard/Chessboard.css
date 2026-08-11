@@ -1,0 +1,27 @@
+.puzzle-container{
+    border: 2px solid gray;
+    border-radius: 5px;
+    min-height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    margin: 10px;
+    gap: 5px;
+}
+
+@media (max-width: 1024px) {
+    .puzzle-container{
+    border: 2px solid gray;
+    border-radius: 5px;
+    min-height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    margin: 10px;
+    gap: 5px;
+    }
+}
