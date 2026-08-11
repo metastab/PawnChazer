@@ -25,7 +25,7 @@ func NewUserRepository(db *mongo.Database) *MongoUserRepository {
 }
 
 
-func (m *MongoUserRepository) GetByID (ctx context.Context, id string) (*model.User, error)  {
+func (m *MongoUserRepository) GetByID (ctx context.Context, id string) (*model.User, error) {
 	objID, err := bson.ObjectIDFromHex(id) //ObjectIDFromHex creates a new ObjectID from a hex string. It returns an error if the hex string is not a valid ObjectID.
 	if err != nil {
 		return nil, err
