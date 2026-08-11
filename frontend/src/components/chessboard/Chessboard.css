@@ -1,7 +1,7 @@
 .puzzle-container{
     border: 2px solid gray;
     border-radius: 5px;
-    min-height: 50vh;
+    min-height: 70vh;
 
     display: flex;
     flex-direction: column;

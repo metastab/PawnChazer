@@ -45,7 +45,7 @@
     padding: 1rem 0.5rem;
     gap: 5px;
 
-    width: 30%;
+    width: 33%;
 }
 
 .challange-button{
@@ -62,14 +62,14 @@
     border: 2px solid gray;
     border-radius: 5px;
     height:60px;
-    min-height: 50vh;
+    min-height: 60vh;
 
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
     gap: 5px;
 
-    width: 60%;
+    width: 55%;
 }
 
 .title{

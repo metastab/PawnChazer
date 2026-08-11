@@ -65,3 +65,18 @@
   font-size: 14px;
   color: #777984;
 }
+
+.empty-container{
+  border: 2px solid gray;
+    border-radius: 5px;
+    height: 40vh;
+    min-height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    gap: 5px;
+
+    background-color: rgba(0, 0, 0, 0);
+}

@@ -10,6 +10,7 @@ import Mainbody from './components/profile/body-section/Mainbody'
 import Footer from './components/footer/Footer'
 import DailyPuzzle from './components/chessboard/DailyPuzzle'
 import FrontAnalytics from './components/analytics/Front-Analytics'
+import Empty from './components/Empty'
 
 import './components/Header/Header.css'
 import './App.css'
@@ -33,6 +34,7 @@ function App() {
       <Mainbody/>
       <DailyPuzzle/>
       <FrontAnalytics/>
+      <Empty/>
       <Footer/>
     </>
   )
