@@ -1,0 +1,56 @@
+.games-container {
+  border: 2px solid var(--ink-border);
+  border-radius: 4px;
+  background: var(--paper-sheet);
+  box-shadow: var(--shadow-2d);
+
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1.5rem;
+  gap: 12px;
+
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(247, 241, 230, 0.3) 100%);
+}
+
+.bar-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink-heading);
+}
+
+.win-rate {
+  font-weight: 700;
+  color: var(--ink-win);
+  background: var(--ink-win-bg);
+  padding: 3px 8px;
+  border-radius: 3px;
+  border: 1.5px solid var(--ink-border);
+}
+
+.total-games {
+  color: var(--ink-muted);
+  background: var(--paper-sheet-dark);
+  padding: 3px 8px;
+  border-radius: 3px;
+  border: 1.5px solid var(--ink-border);
+}
+
+.stats-section {
+  display: flex;
+  gap: 12px;
+}
+
+.stat-item {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 3px;
+  border: 1.5px solid var(--ink-border);
+  background: var(--paper-sheet-accent);
+  box-shadow: 1.5px 1.5px 0px var(--ink-border);
+}

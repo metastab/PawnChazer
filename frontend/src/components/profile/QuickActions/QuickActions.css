@@ -1,0 +1,68 @@
+.quick-actions-container {
+  border: 2px solid var(--ink-border);
+  border-radius: 4px;
+  min-height: 380px;
+  background: var(--paper-sheet);
+  box-shadow: var(--shadow-2d);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  gap: 12px;
+
+  width: 35%;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(246, 239, 224, 0.35) 100%);
+}
+
+.quick-actions-container h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-heading);
+  border-bottom: 2px dashed var(--ink-muted);
+  padding-bottom: 8px;
+  width: 90%;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.challange-button {
+  border: 2px solid var(--ink-border);
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  width: 90%;
+  min-height: 52px;
+  background-color: var(--paper-sheet-accent);
+  color: var(--ink-heading);
+  box-shadow: var(--shadow-2d-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.challange-button:hover {
+  background-color: var(--accent-gold-bg);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px var(--ink-border);
+}
+
+@media (max-width: 1024px) {
+  .quick-actions-container {
+    width: 100%;
+    min-height: auto;
+    padding: 1.25rem;
+  }
+
+  .challange-button {
+    width: 100%;
+    min-height: 48px;
+  }
+}

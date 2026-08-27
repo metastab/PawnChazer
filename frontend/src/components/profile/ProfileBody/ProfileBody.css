@@ -1,0 +1,13 @@
+.body-section {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+@media (max-width: 1024px) {
+  .body-section {
+    flex-direction: column;
+  }
+}

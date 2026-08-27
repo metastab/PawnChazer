@@ -1,0 +1,129 @@
+.profile-container {
+  border: 2px solid var(--ink-border);
+  border-radius: 4px;
+  min-height: 120px;
+  background: var(--paper-sheet);
+  box-shadow: var(--shadow-2d);
+
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  gap: 1.5rem;
+
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(246, 239, 225, 0.4) 100%),
+    repeating-linear-gradient(0deg, transparent, transparent 24px, rgba(0, 0, 0, 0.02) 24px, rgba(0, 0, 0, 0.02) 25px);
+  position: relative;
+}
+
+.panel_main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.ids {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.ids h1 {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--ink-heading);
+  letter-spacing: -0.02em;
+}
+
+.ids p {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--paper-sheet-dark);
+  padding: 2px 8px;
+  border-radius: 2px;
+  border: 1px dashed var(--ink-muted);
+}
+
+/* Rating Style - 2D Stamped Parchment Look */
+.rating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: var(--font-mono);
+  background: var(--paper-sheet-accent);
+  border: 2px solid var(--ink-border);
+  border-radius: 4px;
+  padding: 0.6rem 1.2rem;
+  box-shadow: var(--shadow-2d-sm);
+}
+
+.rating-number {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--ink-heading);
+  letter-spacing: -0.04em;
+}
+
+.rating-number h1 {
+  font-family: var(--font-mono);
+  font-size: inherit;
+  font-weight: 800;
+  margin: 0;
+  color: inherit;
+}
+
+.rating-type {
+  margin-top: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.rating-peak {
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 1024px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .panel_main {
+    align-items: center;
+  }
+
+  .ids {
+    align-items: center;
+  }
+
+  .ids h1 {
+    font-size: 1.75rem;
+  }
+
+  .rating {
+    align-items: center;
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .rating-number {
+    font-size: 2.2rem;
+  }
+}

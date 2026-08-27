@@ -1,0 +1,8 @@
+.avatar-image {
+  border: 2px solid var(--ink-border);
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+  box-shadow: var(--shadow-2d-sm);
+  background-color: var(--paper-sheet-dark);
+}

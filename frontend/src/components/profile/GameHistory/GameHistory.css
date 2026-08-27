@@ -1,0 +1,45 @@
+.gamehistory-container {
+  border: 2px solid var(--ink-border);
+  border-radius: 4px;
+  min-height: 380px;
+  background: var(--paper-sheet);
+  box-shadow: var(--shadow-2d);
+
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 12px;
+
+  width: 65%;
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(246, 239, 224, 0.35) 100%),
+    repeating-linear-gradient(0deg, transparent, transparent 28px, rgba(36, 32, 27, 0.05) 28px, rgba(36, 32, 27, 0.05) 29px);
+}
+
+.gamehistory-title,
+.gamehistory-container .title {
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--ink-heading);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 2px dashed var(--ink-muted);
+  padding-bottom: 8px;
+}
+
+.games-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+@media (max-width: 1024px) {
+  .gamehistory-container {
+    width: 100%;
+    min-height: 280px;
+    padding: 1.25rem;
+  }
+}

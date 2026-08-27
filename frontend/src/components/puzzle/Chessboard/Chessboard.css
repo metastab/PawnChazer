@@ -1,0 +1,23 @@
+.chessboard-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 420px;
+  min-height: 320px;
+  background: var(--paper-sheet-dark);
+  border: 2px dashed var(--ink-muted);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-2d-inset);
+  background-image: 
+    radial-gradient(var(--ink-border) 1px, transparent 1px);
+  background-size: 16px 16px;
+  background-color: var(--paper-sheet-accent);
+}
