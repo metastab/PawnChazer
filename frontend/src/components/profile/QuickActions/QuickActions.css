@@ -46,12 +46,21 @@
   justify-content: center;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
 }
 
 .challange-button:hover {
   background-color: var(--accent-gold-bg);
   transform: translate(-1px, -1px);
   box-shadow: 3px 3px 0px var(--ink-border);
+}
+
+.challange-button.active {
+  background-color: var(--accent-gold-bg);
+  border-color: var(--ink-border);
+  box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.12);
+  transform: translate(2px, 2px);
+  color: var(--ink-heading);
 }
 
 @media (max-width: 1024px) {

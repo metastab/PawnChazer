@@ -2,13 +2,14 @@ import './QuickActions.css';
 
 const DEFAULT_ACTIONS = [
   { id: 'challenge', label: 'Challange' },
-  { id: 'random', label: 'Random 01' },
-  { id: 'something', label: 'Something' },
+  { id: 'tournament', label: 'Tournament' },
+  { id: 'game-history', label: 'Game History' },
 ];
 
 export default function QuickActions({
   title = 'Quick Actions',
   actions = DEFAULT_ACTIONS,
+  activeActionId = 'tournament',
   onActionClick,
   className = '',
 }) {
@@ -17,14 +18,15 @@ export default function QuickActions({
       <h3>{title}</h3>
       {actions.map((action, index) => {
         const label = typeof action === 'string' ? action : action.label;
-        const key = typeof action === 'string' ? index : (action.id || index);
+        const id = typeof action === 'string' ? action : (action.id || index);
+        const isActive = activeActionId === id;
 
         return (
           <button
-            key={key}
+            key={id}
             type="button"
-            className="challange-button"
-            onClick={() => onActionClick && onActionClick(action)}
+            className={`challange-button ${isActive ? 'active' : ''}`.trim()}
+            onClick={() => onActionClick && onActionClick(typeof action === 'string' ? { id: action, label: action } : action)}
           >
             {label}
           </button>

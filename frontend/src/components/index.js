@@ -14,6 +14,8 @@ export { default as Rating } from './profile/ProfileHeader/Rating';
 export { default as GamesSummary } from './profile/GamesSummary/GamesSummary';
 export { default as QuickActions } from './profile/QuickActions/QuickActions';
 export { default as GameHistory } from './profile/GameHistory/GameHistory';
+export { default as TournamentInfo } from './profile/TournamentInfo/TournamentInfo';
+export { default as ChallengePlayer } from './profile/ChallengePlayer/ChallengePlayer';
 export { default as ProfileBody } from './profile/ProfileBody/ProfileBody';
 
 // Puzzle domain
