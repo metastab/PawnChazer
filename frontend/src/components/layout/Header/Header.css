@@ -31,12 +31,6 @@
   gap: 8px;
 }
 
-.header h2::before {
-  content: '♟';
-  font-size: 1.35rem;
-  color: var(--accent-gold);
-}
-
 .header-actions {
   position: relative;
   display: flex;
