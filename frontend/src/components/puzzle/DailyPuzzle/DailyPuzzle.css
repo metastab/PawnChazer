@@ -13,6 +13,24 @@
 
   background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(244, 237, 222, 0.4) 100%);
   position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.puzzle-container.fullscreen-mode {
+  min-height: calc(100vh - 140px);
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  justify-content: center;
+  box-shadow: var(--shadow-2d-lg);
+  padding: 2.5rem 2rem;
+}
+
+.puzzle-header-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .puzzle-container h2 {
@@ -33,11 +51,79 @@
   gap: 10px;
 }
 
+.puzzle-container.fullscreen-mode h2 {
+  max-width: 580px;
+  font-size: 1.85rem;
+}
+
 .puzzle-container h2::before,
 .puzzle-container h2::after {
   content: '✦';
   font-size: 0.85rem;
   color: var(--accent-gold);
+}
+
+.chessboard-section-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.chessboard-container-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 420px;
+}
+
+.puzzle-container.fullscreen-mode .chessboard-container-box {
+  max-width: 620px;
+}
+
+.chessboard-fullscreen-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: var(--paper-sheet-accent);
+  border: 2px solid var(--ink-border);
+  border-radius: 4px;
+  box-shadow: var(--shadow-2d-sm);
+  padding: 0.5rem 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ink-heading);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  z-index: 10;
+  transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.chessboard-fullscreen-btn:hover {
+  background: var(--accent-gold-bg);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px var(--ink-border);
+}
+
+.chessboard-fullscreen-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px var(--ink-border);
+}
+
+.chessboard-fullscreen-btn.active {
+  background: var(--accent-gold-bg);
+}
+
+.chessboard-fullscreen-btn .btn-icon {
+  font-size: 1rem;
+  line-height: 1;
 }
 
 @media (max-width: 1024px) {
@@ -50,3 +136,14 @@
     font-size: 1.3rem;
   }
 }
+
+@media (max-width: 768px) {
+  .chessboard-fullscreen-btn {
+    top: 1rem;
+    right: 1rem;
+    padding: 0.4rem 0.65rem;
+    font-size: 0.75rem;
+  }
+}
+
+
