@@ -1,6 +1,7 @@
 import './QuickActions.css';
 
 const DEFAULT_ACTIONS = [
+  { id: 'play-game', label: 'Play Game' },
   { id: 'challenge', label: 'Challange' },
   { id: 'tournament', label: 'Tournament' },
   { id: 'game-history', label: 'Game History' },

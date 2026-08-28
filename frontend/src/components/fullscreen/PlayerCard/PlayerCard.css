@@ -1,0 +1,129 @@
+.player-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 620px;
+  background: var(--paper-sheet);
+  border: 2px solid var(--ink-border);
+  border-radius: 4px;
+  padding: 0.5rem 0.85rem;
+  box-shadow: var(--shadow-2d-sm);
+  transition: all 0.2s ease;
+}
+
+.player-card.active-turn {
+  background-color: var(--accent-gold-bg);
+  border-color: var(--ink-border);
+  box-shadow: var(--shadow-2d);
+}
+
+.player-meta-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.player-avatar-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 3px;
+  border: 1.5px solid var(--ink-border);
+  background: var(--paper-sheet-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 1px 1px 0px var(--ink-border);
+}
+
+.player-avatar-badge .avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.player-avatar-badge .avatar-fallback {
+  font-size: 1.1rem;
+  color: var(--ink-heading);
+}
+
+.player-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.player-name-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+}
+
+.player-username {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--ink-heading);
+  letter-spacing: 0.02em;
+}
+
+.player-rating {
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+  font-weight: 600;
+}
+
+.player-flag {
+  font-size: 0.9rem;
+}
+
+.player-clock-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--paper-sheet-dark);
+  border: 1.5px solid var(--ink-border);
+  border-radius: 3px;
+  padding: 0.35rem 0.75rem;
+  box-shadow: var(--shadow-2d-sm);
+  font-family: var(--font-mono);
+  transition: all 0.15s ease;
+}
+
+.player-clock-box.clock-active {
+  background: var(--ink-heading);
+  color: var(--paper-sheet);
+  border-color: var(--ink-border);
+}
+
+.player-clock-box.clock-active .clock-icon,
+.player-clock-box.clock-active .clock-time {
+  color: var(--paper-sheet);
+}
+
+.clock-icon {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+}
+
+.clock-time {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--ink-heading);
+}
+
+@media (max-width: 768px) {
+  .player-card {
+    max-width: 100%;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .player-username {
+    font-size: 0.85rem;
+  }
+
+  .clock-time {
+    font-size: 0.9rem;
+  }
+}

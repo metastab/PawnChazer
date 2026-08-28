@@ -26,3 +26,8 @@ export { default as DailyPuzzle } from './puzzle/DailyPuzzle/DailyPuzzle';
 export { default as StreakCard } from './analytics/StreakCard/StreakCard';
 export { default as BestGameCard } from './analytics/BestGameCard/BestGameCard';
 export { default as AnalyticsSection } from './analytics/AnalyticsSection/AnalyticsSection';
+
+// Fullscreen domain
+export { default as FullscreenSidebar } from './fullscreen/FullscreenSidebar/FullscreenSidebar';
+export { default as PlayerCard } from './fullscreen/PlayerCard/PlayerCard';
+

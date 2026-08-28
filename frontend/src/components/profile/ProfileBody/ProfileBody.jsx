@@ -12,12 +12,17 @@ export default function ProfileBody({
   tournamentInfoProps,
   challengePlayerProps,
   initialView = 'tournament',
+  onPlayGame,
   className = '',
 }) {
   const [activeView, setActiveView] = useState(initialView);
 
   const handleActionClick = (action) => {
-    if (action.id === 'tournament') {
+    if (action.id === 'play-game') {
+      if (onPlayGame) {
+        onPlayGame();
+      }
+    } else if (action.id === 'tournament') {
       setActiveView('tournament');
     } else if (action.id === 'game-history') {
       setActiveView('game-history');
