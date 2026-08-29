@@ -11,6 +11,7 @@ import {
   Chessboard,
   PlayerCard,
   FullscreenSidebar,
+  ThemeToggle,
 } from './components';
 import './App.css';
 
@@ -45,17 +46,20 @@ function App() {
             <span className="fullscreen-badge">✦ Puzzle Fullscreen ✦</span>
           </div>
 
-          <button
-            type="button"
-            className="fullscreen-close-btn"
-            onClick={closeFullscreen}
-            aria-label="Exit fullscreen mode"
-            title="Exit Fullscreen (Esc)"
-          >
-            <span className="close-icon">✕</span>
-            <span className="close-text">Exit Fullscreen</span>
-            <kbd className="esc-tag">Esc</kbd>
-          </button>
+          <div className="fullscreen-actions">
+            <ThemeToggle />
+            <button
+              type="button"
+              className="fullscreen-close-btn"
+              onClick={closeFullscreen}
+              aria-label="Exit fullscreen mode"
+              title="Exit Fullscreen (Esc)"
+            >
+              <span className="close-icon">✕</span>
+              <span className="close-text">Exit Fullscreen</span>
+              <kbd className="esc-tag">Esc</kbd>
+            </button>
+          </div>
         </header>
 
         <main className="fullscreen-puzzle-content">
@@ -79,17 +83,20 @@ function App() {
             <span className="fullscreen-badge">✦ Live Match & Analysis ✦</span>
           </div>
 
-          <button
-            type="button"
-            className="fullscreen-close-btn"
-            onClick={closeFullscreen}
-            aria-label="Exit game panel"
-            title="Exit Game Panel (Esc)"
-          >
-            <span className="close-icon">✕</span>
-            <span className="close-text">Exit Game Panel</span>
-            <kbd className="esc-tag">Esc</kbd>
-          </button>
+          <div className="fullscreen-actions">
+            <ThemeToggle />
+            <button
+              type="button"
+              className="fullscreen-close-btn"
+              onClick={closeFullscreen}
+              aria-label="Exit game panel"
+              title="Exit Game Panel (Esc)"
+            >
+              <span className="close-icon">✕</span>
+              <span className="close-text">Exit Game Panel</span>
+              <kbd className="esc-tag">Esc</kbd>
+            </button>
+          </div>
         </header>
 
         <main className="fullscreen-main-split">

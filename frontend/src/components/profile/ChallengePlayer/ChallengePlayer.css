@@ -11,9 +11,8 @@
   gap: 14px;
   width: 100%;
 
-  background-image: 
-    linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(246, 239, 224, 0.4) 100%),
-    repeating-linear-gradient(0deg, transparent, transparent 28px, rgba(36, 32, 27, 0.035) 28px, rgba(36, 32, 27, 0.035) 29px);
+  background-image: var(--sheet-gradient), var(--sheet-pattern);
+  transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .challenge-header {
@@ -81,11 +80,11 @@
   color: var(--ink-heading);
   box-shadow: var(--shadow-2d-sm);
   outline: none;
-  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
 .paper-input:focus {
-  background: #ffffff;
+  background: var(--paper-sheet);
   box-shadow: 3px 3px 0px var(--ink-border);
 }
 
@@ -197,7 +196,7 @@
 }
 
 .challenge-submit-btn:hover {
-  background-color: #b57422;
+  background-color: var(--accent-gold-hover);
   transform: translate(-1px, -1px);
   box-shadow: 5px 5px 0px var(--ink-border);
 }

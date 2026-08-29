@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import ThemeToggle from '../../common/ThemeToggle/ThemeToggle';
 import './Header.css';
 
 const DEFAULT_MENU_ITEMS = [
@@ -55,6 +56,7 @@ export default function Header({
       <h2>{title}</h2>
 
       <div className="header-actions">
+        <ThemeToggle />
         <button
           className={`hamburger ${isOpen ? 'active' : ''}`.trim()}
           onClick={toggleMenu}

@@ -1,0 +1,65 @@
+.theme-toggle-btn {
+  height: 40px;
+  width: 40px;
+  background-color: var(--paper-sheet-accent);
+  border: 2px solid var(--ink-border);
+  border-radius: 3px;
+  cursor: pointer;
+  color: var(--ink-heading);
+  box-shadow: var(--shadow-2d-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--accent-gold-bg);
+  color: var(--accent-gold);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px var(--ink-border);
+}
+
+.theme-toggle-btn:active {
+  background-color: var(--accent-gold-bg);
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px var(--ink-border);
+}
+
+.theme-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.theme-toggle-btn:hover .theme-icon-wrapper {
+  transform: scale(1.1);
+}
+
+.theme-icon {
+  display: block;
+  animation: iconPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.sun-icon {
+  color: var(--accent-gold);
+}
+
+.moon-icon {
+  color: var(--ink-heading);
+}
+
+@keyframes iconPop {
+  0% {
+    transform: rotate(-45deg) scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}

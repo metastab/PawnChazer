@@ -15,8 +15,8 @@
   z-index: 1000;
   background: var(--paper-sheet);
   box-shadow: var(--shadow-2d);
-
-  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(244, 237, 222, 0.3) 100%);
+  background-image: var(--sheet-gradient);
+  transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .header h2 {
@@ -35,6 +35,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  gap: 8px;
 }
 
 .hamburger {
@@ -51,7 +52,7 @@
   align-items: center;
   justify-content: center;
   padding: 0;
-  transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
 }
 
 .hamburger:hover {
@@ -82,9 +83,7 @@
   gap: 8px;
   z-index: 1050;
 
-  background-image: 
-    linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(246, 239, 224, 0.45) 100%),
-    repeating-linear-gradient(0deg, transparent, transparent 24px, rgba(36, 32, 27, 0.03) 24px, rgba(36, 32, 27, 0.03) 25px);
+  background-image: var(--sheet-gradient), var(--sheet-pattern);
 
   animation: menuPaperFade 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   transform-origin: top right;

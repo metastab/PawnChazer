@@ -27,11 +27,6 @@ export default function StreakCard({
             <div
               key={index}
               className={`day-box ${isActive ? 'active' : ''}`.trim()}
-              style={
-                isActive
-                  ? { backgroundColor: '#21c45d', color: 'white' }
-                  : undefined
-              }
             >
               {label}
             </div>

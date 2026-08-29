@@ -2,6 +2,7 @@
 export { default as Avatar } from './common/Avatar/Avatar';
 export { default as WinBar } from './common/WinBar/WinBar';
 export { default as Empty } from './common/Empty/Empty';
+export { default as ThemeToggle } from './common/ThemeToggle/ThemeToggle';
 
 // Layout
 export { default as Header } from './layout/Header/Header';

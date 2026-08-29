@@ -23,13 +23,13 @@ export default function GamesSummary({
       </div>
 
       <div className="stats-section">
-        <span className="stat-item" style={{ color: '#21c45d' }}>
+        <span className="stat-item stat-win">
           {wins} W
         </span>
-        <span className="stat-item" style={{ color: '#7c8a9c' }}>
+        <span className="stat-item stat-draw">
           {draws} D
         </span>
-        <span className="stat-item" style={{ color: '#ef4343' }}>
+        <span className="stat-item stat-lose">
           {losses} L
         </span>
       </div>

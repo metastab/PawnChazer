@@ -49,11 +49,13 @@
 
 /* Wood/paper squares matching user screenshot & vintage style */
 .square-light {
-  background-color: #f1dfbf;
+  background-color: var(--board-square-light);
+  transition: background-color 0.25s ease;
 }
 
 .square-dark {
-  background-color: #b9895c;
+  background-color: var(--board-square-dark);
+  transition: background-color 0.25s ease;
 }
 
 /* Coordinates */
@@ -80,11 +82,11 @@
 }
 
 .coord-on-light {
-  color: #b9895c;
+  color: var(--board-coord-light);
 }
 
 .coord-on-dark {
-  color: #f1dfbf;
+  color: var(--board-coord-dark);
 }
 
 @media (max-width: 768px) {

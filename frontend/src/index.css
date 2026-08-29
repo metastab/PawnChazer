@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
+  /* Typography Tokens */
+  --font-display: 'Cinzel', 'Newsreader', serif;
+  --font-serif: 'Newsreader', Georgia, serif;
+  --font-mono: 'DM Mono', Consolas, monospace;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* Default Light Palette (Paper Ledger / Parchment / Classic Ink) */
   --paper-bg: #f4eee1;
   --paper-sheet: #fffdf8;
   --paper-sheet-accent: #fbf7ee;
@@ -21,29 +28,123 @@
 
   --accent-gold: #c8832a;
   --accent-gold-bg: #fdf3e2;
+  --accent-gold-hover: #b57422;
 
   --shadow-2d: 4px 4px 0px var(--ink-border);
   --shadow-2d-sm: 2px 2px 0px var(--ink-border);
   --shadow-2d-lg: 6px 6px 0px var(--ink-border);
   --shadow-2d-inset: inset 2px 2px 0px rgba(0, 0, 0, 0.08);
 
-  --font-display: 'Cinzel', 'Newsreader', serif;
-  --font-serif: 'Newsreader', Georgia, serif;
-  --font-mono: 'DM Mono', Consolas, monospace;
-  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --sheet-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.65) 0%, rgba(246, 239, 224, 0.35) 100%);
+  --sheet-pattern: repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(36, 32, 27, 0.035) 27px, rgba(36, 32, 27, 0.035) 28px);
+  --bg-pattern: 
+    radial-gradient(circle at 15% 15%, rgba(0, 0, 0, 0.02) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(0, 0, 0, 0.03) 0%, transparent 45%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(222, 211, 192, 0.3) 100%);
+
+  --board-square-light: #f1dfbf;
+  --board-square-dark: #b9895c;
+  --board-coord-light: #b9895c;
+  --board-coord-dark: #f1dfbf;
 
   font-family: var(--font-sans);
   color: var(--ink-text);
   background-color: var(--paper-bg);
-  background-image: 
-    radial-gradient(circle at 15% 15%, rgba(0, 0, 0, 0.02) 0%, transparent 40%),
-    radial-gradient(circle at 85% 85%, rgba(0, 0, 0, 0.03) 0%, transparent 45%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(222, 211, 192, 0.3) 100%);
-  background-attachment: fixed;
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  color-scheme: light;
+}
+
+/* Dark Mode Palette (Midnight Parchment / Obsidian & Velvet Slate / Neo-Noir Chess Club) */
+[data-theme='dark'] {
+  --paper-bg: #121110;
+  --paper-sheet: #1c1a17;
+  --paper-sheet-accent: #26231f;
+  --paper-sheet-dark: #302c26;
+
+  --ink-black: #ffffff;
+  --ink-heading: #f6eee3;
+  --ink-text: #ded5c7;
+  --ink-muted: #9e9384;
+  --ink-faint: #595044;
+  --ink-border: #42392f;
+
+  --ink-win: #4ade80;
+  --ink-win-bg: #143520;
+  --ink-lose: #f87171;
+  --ink-lose-bg: #3c1917;
+  --ink-draw: #9ca3af;
+
+  --accent-gold: #e2a843;
+  --accent-gold-bg: #382813;
+  --accent-gold-hover: #f1b855;
+
+  --shadow-2d: 4px 4px 0px #090807;
+  --shadow-2d-sm: 2px 2px 0px #090807;
+  --shadow-2d-lg: 6px 6px 0px #090807;
+  --shadow-2d-inset: inset 2px 2px 0px rgba(0, 0, 0, 0.45);
+
+  --sheet-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(0, 0, 0, 0.25) 100%);
+  --sheet-pattern: repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(255, 255, 255, 0.02) 27px, rgba(255, 255, 255, 0.02) 28px);
+  --bg-pattern: 
+    radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.015) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(226, 168, 67, 0.025) 0%, transparent 45%),
+    linear-gradient(135deg, rgba(28, 26, 23, 0.95) 0%, rgba(18, 17, 16, 0.98) 100%);
+
+  --board-square-light: #cbb898;
+  --board-square-dark: #7a5435;
+  --board-coord-light: #7a5435;
+  --board-coord-dark: #cbb898;
+
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --paper-bg: #121110;
+    --paper-sheet: #1c1a17;
+    --paper-sheet-accent: #26231f;
+    --paper-sheet-dark: #302c26;
+
+    --ink-black: #ffffff;
+    --ink-heading: #f6eee3;
+    --ink-text: #ded5c7;
+    --ink-muted: #9e9384;
+    --ink-faint: #595044;
+    --ink-border: #42392f;
+
+    --ink-win: #4ade80;
+    --ink-win-bg: #143520;
+    --ink-lose: #f87171;
+    --ink-lose-bg: #3c1917;
+    --ink-draw: #9ca3af;
+
+    --accent-gold: #e2a843;
+    --accent-gold-bg: #382813;
+    --accent-gold-hover: #f1b855;
+
+    --shadow-2d: 4px 4px 0px #090807;
+    --shadow-2d-sm: 2px 2px 0px #090807;
+    --shadow-2d-lg: 6px 6px 0px #090807;
+    --shadow-2d-inset: inset 2px 2px 0px rgba(0, 0, 0, 0.45);
+
+    --sheet-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(0, 0, 0, 0.25) 100%);
+    --sheet-pattern: repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(255, 255, 255, 0.02) 27px, rgba(255, 255, 255, 0.02) 28px);
+    --bg-pattern: 
+      radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.015) 0%, transparent 40%),
+      radial-gradient(circle at 85% 85%, rgba(226, 168, 67, 0.025) 0%, transparent 45%),
+      linear-gradient(135deg, rgba(28, 26, 23, 0.95) 0%, rgba(18, 17, 16, 0.98) 100%);
+
+    --board-square-light: #cbb898;
+    --board-square-dark: #7a5435;
+    --board-coord-light: #7a5435;
+    --board-coord-dark: #cbb898;
+
+    color-scheme: dark;
+  }
 }
 
 * {
@@ -54,11 +155,14 @@ body {
   margin: 0;
   min-height: 100vh;
   background-color: var(--paper-bg);
+  background-image: var(--bg-pattern);
+  background-attachment: fixed;
   color: var(--ink-text);
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 #root {
-  width: 1120px;
+  width: 1344px;
   max-width: 100%;
   margin: 0 auto;
   min-height: 100vh;
@@ -74,6 +178,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.01em;
   margin: 0;
   font-weight: 700;
+  transition: color 0.25s ease;
 }
 
 h1 {
@@ -97,7 +202,7 @@ p {
 
 button {
   font-family: var(--font-mono);
-  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.15s ease;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
 button:active {
